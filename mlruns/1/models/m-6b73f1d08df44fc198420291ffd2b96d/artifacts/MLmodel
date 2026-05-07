@@ -1,0 +1,23 @@
+artifact_path: file:C:/Users/javi1/Downloads/proyecto_ejemplo_mlops/mi_proyecto/mlruns/1/models/m-6b73f1d08df44fc198420291ffd2b96d/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.13.13
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.6.1
+    skops_trusted_types: null
+mlflow_version: 3.12.0
+model_id: m-6b73f1d08df44fc198420291ffd2b96d
+model_size_bytes: 1503974
+model_uuid: m-6b73f1d08df44fc198420291ffd2b96d
+prompts: null
+run_id: 9bfec279ffac488b860064ce982fa0e1
+utc_time_created: '2026-05-06 18:49:15.156628'
