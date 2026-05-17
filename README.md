@@ -1,11 +1,10 @@
 # CreditML — Pipeline MLOps: Predicción de Aprobación de Préstamos
 
 > **Proyecto académico en MLOps** — Metodologías de Desarrollo y Despliegue de Aplicaciones para Ciencia de Datos (20GIAR)  
-> Nivel de referencia: notable (7-8). Se señalan con [NOTA DOCENTE] los puntos clave a imitar.
 
-**Equipo:** [Nombre Alumno 1] / [Nombre Alumno 2]  
+**Equipo:** Javier de Castro Santiago
 **Proyecto elegido:** Credit Scoring — Pipeline MLOps  
-**Repositorio:** https://github.com/[usuario]/creditml-scoring  
+**Repositorio:** https://github.com/javierdecas/creditml-scoring.git
 
 ---
 
