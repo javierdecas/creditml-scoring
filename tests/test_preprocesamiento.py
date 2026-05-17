@@ -1,7 +1,5 @@
-import pytest
 import pandas as pd
 import numpy as np
-from unittest.mock import patch
 from src.data.preprocesamiento import preprocesar, imputar_nulos, codificar_categoricas
 
 

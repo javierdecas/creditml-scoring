@@ -3,8 +3,7 @@
 import pytest
 import pandas as pd
 import numpy as np
-from pathlib import Path
-from unittest.mock import patch, mock_open, MagicMock
+from unittest.mock import patch, mock_open
 from src.data.ingesta import (
     cargar_datos,
     validar_esquema,

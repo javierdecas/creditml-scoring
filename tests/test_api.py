@@ -1,6 +1,6 @@
 import pytest
 import pandas as pd
-from unittest.mock import patch, MagicMock
+from unittest.mock import patch
 from fastapi.testclient import TestClient
 from src.api.main import app
 
@@ -25,15 +25,10 @@ class TestHealthEndpoint:
 class TestPredictEndpoint:
     def test_predict_datos_validos(self, client):
         """Test /predict con datos válidos y modelo mockeado."""
-        import numpy as np
         # Patchear en el módulo main
-        with patch('src.api.main.modelo') as mock_modelo, \
-             patch('src.api.main.preprocesar') as mock_preprocesar:
-    
+        with patch('src.api.main.preprocesar') as mock_preprocesar:
+
             # Configurar mocks
-            mock_instance = MagicMock()
-            mock_instance.predict_proba.return_value = np.array([[0.3, 0.7]])
-            
             mock_preprocesar.return_value = pd.DataFrame({'dummy': [1]})
 
             data = {
@@ -69,13 +64,8 @@ class TestPredictEndpoint:
 
     def test_predict_error_preprocesamiento(self, client):
         """Test /predict con error en preprocesamiento."""
-        with patch('src.api.main.modelo') as mock_modelo, \
-             patch('src.api.main.preprocesar', side_effect=Exception("Error de preprocesamiento")):
-            
-            mock_instance = MagicMock()
-            mock_modelo.__bool__.return_value = True
-            mock_modelo.predict_proba = mock_instance.predict_proba
-            
+        with patch('src.api.main.preprocesar', side_effect=Exception("Error de preprocesamiento")):
+
             data = {
                 "age": 35,
                 "income": 45000.0,

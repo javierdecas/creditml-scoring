@@ -15,7 +15,7 @@ from src.models.evaluacion import supera_umbrales
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
 
-DATA_PATH  = Path("data/processed/credit_approval_processed.csv")
+DATA_PATH = Path("data/processed/credit_approval_processed.csv")
 MODEL_PATH = Path("models/credit_model.pkl")
 
 MLFLOW_EXPERIMENT = "creditml-scoring"
@@ -84,8 +84,8 @@ def main() -> None:
         y_pred_proba = modelo.predict_proba(X_test)[:, 1]
         y_pred = modelo.predict(X_test)
 
-        auc  = roc_auc_score(y_test, y_pred_proba)
-        f1   = f1_score(y_test, y_pred)
+        auc = roc_auc_score(y_test, y_pred_proba)
+        f1 = f1_score(y_test, y_pred)
 
         mlflow.log_metric("auc_roc", auc)
         mlflow.log_metric("f1_score", f1)

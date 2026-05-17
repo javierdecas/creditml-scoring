@@ -1,10 +1,9 @@
 """Tests para módulo entrenamiento.py - entrenamiento del modelo."""
 
-import pytest
 import pandas as pd
 import numpy as np
 from pathlib import Path
-from unittest.mock import patch, MagicMock, call
+from unittest.mock import patch, MagicMock
 from sklearn.ensemble import RandomForestClassifier
 from src.models.entrenamiento import cargar_datos, entrenar, main
 
@@ -45,7 +44,7 @@ class TestEntrenar:
             with patch('mlflow.log_metric'):
                 with patch('mlflow.sklearn.log_model'):
                     entrenar(X, y)
-            
+
             # Verificar que se registraron parámetros del modelo
             param_calls = [c[0][0] for c in mock_log_param.call_args_list]
             assert 'n_estimators' in param_calls or any('param' in str(c) for c in param_calls)
@@ -65,7 +64,7 @@ class TestEntrenar:
             with patch('mlflow.log_metric') as mock_log_metric:
                 with patch('mlflow.sklearn.log_model'):
                     entrenar(X, y)
-            
+
             # Verificar que se registraron métricas
             metric_names = [c[0][0] for c in mock_log_metric.call_args_list]
             assert any('auc' in m.lower() or 'f1' in m.lower() for m in metric_names)
@@ -168,7 +167,7 @@ class TestEntrenar:
                                     with patch('src.models.entrenamiento.mlflow.sklearn.log_model') as mock_log_model:
                                         with patch('src.models.entrenamiento.mlflow.log_artifact') as mock_log_artifact:
                                             with patch('src.models.entrenamiento.joblib.dump') as mock_joblib_dump:
-                                                with patch('src.models.entrenamiento.Path.mkdir') as mock_mkdir:
+                                                with patch('src.models.entrenamiento.Path.mkdir'):
                                                     with patch('src.models.entrenamiento.supera_umbrales', return_value=True) as mock_supera:
                                                         main()
 

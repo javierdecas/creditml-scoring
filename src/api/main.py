@@ -7,14 +7,13 @@ import joblib
 import pandas as pd
 from pathlib import Path
 from fastapi import FastAPI, HTTPException
-from fastapi.responses import JSONResponse
 from src.api.schemas import ClienteInput, PrediccionOutput
 from src.data.preprocesamiento import preprocesar
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
 
-MODEL_PATH    = Path(os.getenv("MODEL_PATH", "models/credit_model.pkl"))
+MODEL_PATH = Path(os.getenv("MODEL_PATH", "models/credit_model.pkl"))
 MODEL_VERSION = os.getenv("MODEL_VERSION", "1.0.0")
 
 app = FastAPI(

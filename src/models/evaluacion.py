@@ -1,7 +1,7 @@
 """Umbrales de calidad del modelo."""
 
 AUC_MINIMO = 0.78
-F1_MINIMO  = 0.70
+F1_MINIMO = 0.70
 
 
 def supera_umbrales(auc: float, f1: float) -> bool:

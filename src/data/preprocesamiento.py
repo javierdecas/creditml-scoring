@@ -8,7 +8,7 @@ from sklearn.impute import SimpleImputer
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
 
-INPUT_PATH  = Path("data/validated/credit_approval_validated.csv")
+INPUT_PATH = Path("data/validated/credit_approval_validated.csv")
 OUTPUT_PATH = Path("data/processed/credit_approval_processed.csv")
 
 NUMERIC_COLS = ["age", "income", "loan_amount", "credit_history_length", "existing_debt"]
