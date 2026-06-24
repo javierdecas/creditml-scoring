@@ -1,0 +1,143 @@
+[
+  {
+    "age": 56,
+    "income": 77447,
+    "employment_status": "unemployed",
+    "loan_amount": 40654,
+    "credit_history_length": 16,
+    "existing_debt": 4766,
+    "payment_history": "fair",
+    "approved": 1
+  },
+  {
+    "age": 69,
+    "income": 36444,
+    "employment_status": "unemployed",
+    "loan_amount": 42826,
+    "credit_history_length": 8,
+    "existing_debt": 18338,
+    "payment_history": "poor",
+    "approved": 0
+  },
+  {
+    "age": 46,
+    "income": 73070,
+    "employment_status": "employed",
+    "loan_amount": 14272,
+    "credit_history_length": 3,
+    "existing_debt": -4615,
+    "payment_history": "poor",
+    "approved": 0
+  },
+  {
+    "age": 32,
+    "income": 42499,
+    "employment_status": "self-employed",
+    "loan_amount": 11984,
+    "credit_history_length": 22,
+    "existing_debt": 17548,
+    "payment_history": "fair",
+    "approved": 0
+  },
+  {
+    "age": 60,
+    "income": 36117,
+    "employment_status": "self-employed",
+    "loan_amount": 27152,
+    "credit_history_length": 27,
+    "existing_debt": 8870,
+    "payment_history": "good",
+    "approved": 0
+  },
+  {
+    "age": 25,
+    "income": 52197,
+    "employment_status": "unemployed",
+    "loan_amount": 51601,
+    "credit_history_length": 13,
+    "existing_debt": 20722,
+    "payment_history": "good",
+    "approved": 1
+  },
+  {
+    "age": 78,
+    "income": 56849,
+    "employment_status": "self-employed",
+    "loan_amount": 19591,
+    "credit_history_length": 18,
+    "existing_debt": 9990,
+    "payment_history": "excellent",
+    "approved": 1
+  },
+  {
+    "age": 38,
+    "income": 88230,
+    "employment_status": "unemployed",
+    "loan_amount": 36824,
+    "credit_history_length": 25,
+    "existing_debt": 4223,
+    "payment_history": "fair",
+    "approved": 0
+  },
+  {
+    "age": 56,
+    "income": 56390,
+    "employment_status": "employed",
+    "loan_amount": 36825,
+    "credit_history_length": 27,
+    "existing_debt": 12464,
+    "payment_history": "good",
+    "approved": 1
+  },
+  {
+    "age": 75,
+    "income": 53865,
+    "employment_status": "self-employed",
+    "loan_amount": 41411,
+    "credit_history_length": 2,
+    "existing_debt": 9756,
+    "payment_history": "fair",
+    "approved": 0
+  },
+  {
+    "age": 36,
+    "income": 81922,
+    "employment_status": "employed",
+    "loan_amount": 54966,
+    "credit_history_length": 13,
+    "existing_debt": 3513,
+    "good": "good",
+    "payment_history": "good",
+    "approved": 1
+  },
+  {
+    "age": 40,
+    "income": 62021,
+    "employment_status": "self-employed",
+    "loan_amount": 53428,
+    "credit_history_length": 7,
+    "existing_debt": 27746,
+    "payment_history": "excellent",
+    "approved": 1
+  },
+  {
+    "age": 28,
+    "income": 37114,
+    "employment_status": "employed",
+    "loan_amount": 21080,
+    "credit_history_length": 23,
+    "existing_debt": 2231,
+    "payment_history": "excellent",
+    "approved": 0
+  },
+  {
+    "age": 28,
+    "income": 77119,
+    "employment_status": "self-employed",
+    "loan_amount": -1468,
+    "credit_history_length": 26,
+    "existing_debt": -7943,
+    "payment_history": "fair",
+    "approved": 0
+  }
+]

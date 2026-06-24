@@ -44,6 +44,18 @@ def health_check():
     return {"status": "ok", "modelo_cargado": modelo is not None, "version": MODEL_VERSION}
 
 
+@app.get("/metrics")
+def metrics():
+    return {
+        "model_version": MODEL_VERSION,
+        "model_loaded": modelo is not None,
+        "model_type": type(modelo).__name__ if modelo is not None else None,
+        "feature_count": len(modelo.feature_names_in_) if modelo is not None and hasattr(modelo, "feature_names_in_") else None,
+        "supports_predict_proba": modelo is not None and hasattr(modelo, "predict_proba"),
+        "model_path": str(MODEL_PATH),
+    }
+
+
 @app.post("/predict", response_model=PrediccionOutput)
 def predict(cliente: ClienteInput):
     if modelo is None:
