@@ -198,14 +198,6 @@ El servicio de Docker Compose arranca `api` y `localstack`, pero la API no requi
 - endpoints de estado `/health` y `/metrics`
 - pruebas unitarias básicas de API
 
-### No implementado
-
-- endpoint de lote `/predict-batch`
-- endpoint de explicabilidad `/risk-profile`
-- detección automática de model drift
-- alertas a Slack o PagerDuty
-- despliegue real en AWS Lambda
-
 ---
 
 ## Referencias
